@@ -8,7 +8,6 @@ const basicFetch = async (endpoint) => {
     return json;
 }
 
-
 export default {
 
     getHomeList: async () => {
@@ -19,13 +18,13 @@ export default {
                 items: await basicFetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
             },
             {
-                slug: 'marvel-series',
-                title: 'Séries originais da marvel',
+                slug: 'releases',
+                title: 'Lançamentos',
                 items: await basicFetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
             }, 
             {
-                slug: 'dc-universe-series',
-                title: 'Séries originais da Dc',
+                slug: 'for-you',
+                title: 'Recomendados para você',
                 items: await basicFetch(`/discover/movie?with_genres=28&language=pt-BR&api_key=${API_KEY}`)
             },
             {
