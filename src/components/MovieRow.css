@@ -18,12 +18,12 @@
 .movieRow--item {
     display: inline-block;
     width: 150px;
+    cursor: pointer;
 }
 
 .movieRow--item img {
     width: 100%;
     transform: scale(0.9);  /* esqueminha para a animaçao quando o usuário passar o mouse */
-    cursor: pointer;
     transition: all ease 0.3s;
 }
 
