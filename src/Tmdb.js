@@ -13,8 +13,8 @@ export default {
         return [
             {
                 slug: 'originals',
-                title: 'Os maiores super heróis das telonas',
-                items: await basicFetch(`/discover/movie?with_keywords=9715&language=pt-BR&api_key=${API_KEY}`)
+                title: 'Em alta',
+                items: await basicFetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'marvel-movies',
