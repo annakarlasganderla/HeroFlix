@@ -13,43 +13,38 @@ export default {
         return [
             {
                 slug: 'originals',
-                title: 'Originais Netflix',
-                items: await basicFetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
+                title: 'Os maiores super heróis das telonas',
+                items: await basicFetch(`/discover/movie?with_keywords=9715&language=pt-BR&api_key=${API_KEY}`)
             },
             {
-                slug: 'trending',
-                title: 'Recomendados para você',
-                items: await basicFetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
-            }, 
-            {
-                slug: 'toprated',
-                title: 'Em alta',
-                items: await basicFetch(`/movie/top_rated?language=pt-BR&api_key=${API_KEY}`)
+                slug: 'marvel-movies',
+                title: 'Marvel',
+                items: await basicFetch(`/discover/movie?with_keywords=180547&language=pt-BR&api_key=${API_KEY}`)
             },
             {
-                slug: 'action',
-                title: 'Ação',
-                items: await basicFetch(`/discover/movie?with_genres=28&language=pt-BR&api_key=${API_KEY}`)
+                slug: 'dc-movie',
+                title: 'Dc',
+                items: await basicFetch(`/discover/movie?with_keywords=849&language=pt-BR&api_key=${API_KEY}`)
             },
             {
-                slug: 'comedy',
-                title: 'Comédia',
-                items: await basicFetch(`/discover/movie?with_genres=35&language=pt-BR&api_key=${API_KEY}`)
+                slug: 'marvel-series',
+                title: 'Séries da Marvel',
+                items: await basicFetch(`/discover/tv?with_keywords=180547&language=pt-BR&api_key=${API_KEY}`)
             },
             {
-                slug: 'horror',
-                title: 'Terror',
-                items: await basicFetch(`/discover/movie?with_genres=27&language=pt-BR&api_key=${API_KEY}`)
+                slug: 'dc-series',
+                title: 'Séries da Dc',
+                items: await basicFetch(`/discover/tv?with_keywords=849&language=pt-BR&api_key=${API_KEY}`)
             },
             {
-                slug: 'romance',
-                title: 'Romance',
-                items: await basicFetch(`/discover/movie?with_genres=10749&language=pt-BR&api_key=${API_KEY}`)
+                slug: 'comic-series',
+                title: 'Séries baseadas nos quadrinhos',
+                items: await basicFetch(`/discover/tv?with_keywords=9717&language=pt-BR&api_key=${API_KEY}`)
             },
             {
-                slug: 'documentary',
-                title: 'documentario',
-                items: await basicFetch(`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}`)
+                slug: 'comic-movies',
+                title: 'Filmes baseados nos quadrinhos',
+                items: await basicFetch(`/discover/movie?with_keywords=9717&language=pt-BR&api_key=${API_KEY}`)
             },
         ]
     },
