@@ -22,7 +22,6 @@ export default () => {
       let originals = list.filter(i=>i.slug === 'originals');
       let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length - 1));
       let chosen = originals[0].items.results[randomChosen];
-
       let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv');
 
       setFeaturedData(chosenInfo);
@@ -72,6 +71,14 @@ export default () => {
        Direitos de imagem para Netflix <br/>
        Dados pegos do site <a href="https://www.themoviedb.org/">The Movie Db</a>
      </footer>
+
+     {movieList.length <=  0 &&
+
+     <div class="loading">
+       <img src="https://1.bp.blogspot.com/-B9juta27w6o/Xzk4GGrOziI/AAAAAAABtpE/0OMhU_0hPTY7PhayDfL3eJ5mIc2csWWWwCLcBGAsYHQ/s1600/Netflix_LoadTime.gif" alt="carregando" />
+     </div>
+
+     }
 
     </div>
     
