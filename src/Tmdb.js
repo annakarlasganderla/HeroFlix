@@ -11,11 +11,7 @@ export default {
 
     getHomeList: async () => {
         return [
-            {
-                slug: 'originals',
-                title: 'Em alta',
-                items: await basicFetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
-            },
+            
             {
                 slug: 'marvel-movies',
                 title: 'Marvel',
@@ -46,6 +42,11 @@ export default {
                 title: 'Filmes baseados nos quadrinhos',
                 items: await basicFetch(`/discover/movie?with_keywords=9717&language=pt-BR&api_key=${API_KEY}`)
             },
+            {
+                slug: 'originals',
+                title: 'Em alta',
+                items: await basicFetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
+            }
         ]
     },
 
